@@ -120,7 +120,7 @@ const themeSlice = createSlice({
     },
     toggleTheme: (state) => {
       state.value = !state.value;
-      localStorage.setItem("theme", JSON.stringify(state.value));
+      localStorage.setItem("isDark", JSON.stringify(state.value));
     },
   },
 });

@@ -10,14 +10,17 @@ const Theme = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const theme = JSON.parse(localStorage.getItem("theme")!) || undefined;
+    const isThemeDark = JSON.parse(localStorage.getItem("isDark")!);
 
-    if (!theme) return;
+    if (localStorage.getItem("isDark")) {
+      dispatch(setTheme(isThemeDark));
 
-    if (theme) {
-      dispatch(setTheme(theme));
-      body.current.classList.add("dark");
+      if (!isThemeDark) body.current.classList.remove("dark");
+      return;
     }
+
+    dispatch(setTheme(true));
+    localStorage.setItem("isDark", "true");
   }, []);
 
   return (
