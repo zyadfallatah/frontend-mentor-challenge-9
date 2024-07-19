@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --very-light-color: 236, 33%, 92%;
+    --bg-color: 0, 0%, 98%;
+    --bg-alt-color: 233, 11%, 84%;
+    --todo-color: 0 0 100%;
+    --text-color: 235, 19%, 35%;
+    --text-alt-color: 233, 11%, 84%;
+    --text-light-color: 236, 9%, 61%;
+  }
+  :root.dark {
+    --very-light-color: 234, 11%, 52%;
+    --bg-color: 235, 21%, 11%;
+    --bg-alt-color: 233, 14%, 35%;
+    --todo-color: 235, 24%, 19%;
+    --text-color: 234, 39%, 85%;
+    --text-alt-color: 233, 14%, 35%;
+    --text-light-color: 235 16% 43%;
+  }
+}
+
+body {
+  font-family: "Josefin Sans";
+}

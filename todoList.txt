@@ -1,0 +1,32 @@
+[x] Define Requirement
+[x] Structure Codebase (important)
+[x] Define The object represent todos
+[x] Setup store (Redux For This project)
+
+=== Requirement ===
+1- Manage Todos by having crud operations
+2- Todos can be either completed or active
+3- Ability to clear all Todos
+4- Filtering Todos by completion state 
+5- Showing numbers of Active Todos
+6- Light/Dark Themes
+
+=== Structure Codebase ===
+- allTodos should be stored in redux store 
+  -- Other infos should be generated from allTodos like active todos and so on
+  -- Define ID for each todo
+  
+- Add Todo Will be seperate component
+- Todos will have all Todo <different components> 
+- Body should toggle dark based on a stored value and that's apply to all page
+#Bonus store todos in localstorage
+
+=== Define Objects ===
+Theme: {
+  isDark: boolean
+}
+TodoType: {
+  todoID: number,
+  todoName: string,
+  completed: boolean
+}
