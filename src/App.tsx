@@ -4,13 +4,18 @@ import AddTodo from "./components/AddTodo";
 import ListTodo from "./components/ListTodo";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setTodos } from "./store";
+import { setTodos, mockupExample } from "./store";
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
     const items = JSON.parse(localStorage.getItem("todos")!) || undefined;
+
+    if (!localStorage.getItem("todos")) {
+      dispatch(setTodos(mockupExample));
+      return;
+    }
 
     if (items) dispatch(setTodos(items));
   }, []);

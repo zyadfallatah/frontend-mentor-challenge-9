@@ -149,3 +149,36 @@ export const {
 } = todosSlice.actions;
 
 export const { toggleTheme, setTheme } = themeSlice.actions;
+
+export const mockupExample = [
+  {
+    todoID: 1,
+    completed: true,
+    todoName: "Complete online JavaScript course",
+  },
+  {
+    todoID: 2,
+    completed: false,
+    todoName: "Jog around the park 3x",
+  },
+  {
+    todoID: 3,
+    completed: false,
+    todoName: "10 minutes meditation",
+  },
+  {
+    todoID: 4,
+    completed: false,
+    todoName: "Read for 1 hour",
+  },
+  {
+    todoID: 5,
+    completed: false,
+    todoName: "Pick up groceries",
+  },
+  {
+    todoID: 6,
+    completed: false,
+    todoName: "Complete Todo App on Frontend Mentor",
+  },
+];
